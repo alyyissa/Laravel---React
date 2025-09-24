@@ -3,6 +3,20 @@ import React, { useEffect, useState } from 'react'
 const Navbar = () => {
     const [showNav, setShowNav] = useState(true);
     const [lastScroll, setLastScroll] = useState(0)
+    const [open, setOpen] = useState(false);
+
+    useEffect(() =>{
+        if(open){
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflowX = "hidden";
+            document.body.style.overflowY = "auto";
+        }
+        return () => {
+            document.body.style.overflowX = "hidden";
+            document.body.style.overflowY = "auto";
+        }
+    },[open]);
 
     useEffect(()=>{
         const handleScroll = () => {
