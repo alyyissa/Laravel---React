@@ -4,6 +4,7 @@ import Login from './pages/Auth/Login'
 import Home from './pages/Home'
 import Signup from './pages/Auth/Signup'
 import ForgetPass from './pages/Auth/ForgetPass'
+import NotFound from './pages/Error.jsx/NotFound'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/login' element={<Login />}/>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/forgetpass' element={<ForgetPass />}/>
+        <Route path='/error' element={<NotFound />}/>
       </Routes>
     </div>
   )
