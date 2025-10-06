@@ -7,6 +7,11 @@ import Loading from '../../components/Loading/Loading';
 const Signup = () => {
 
     const [loading, setLoading] = useState(true);
+    const [showPass, setShowPass] = useState(false);
+
+    const togglePass = () =>{
+        setShowPass(!showPass)
+    }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,7 +63,7 @@ const Signup = () => {
                                     type="password"
                                     placeholder="Enter Password"
                                     className="focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]"
-                                    name="psw"
+                                    name="password"
                                     required
                                     />
                                 </div>
@@ -67,14 +72,14 @@ const Signup = () => {
                                     <span className={`${styles["password-field-show"]} relative`}>
                                     <input
                                         className={`${styles["password-field"]} focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]`}
-                                        type="password"
+                                        type={showPass ? 'text' : 'password'}
                                         placeholder="Re-enter Password"
-                                        name="psw"
+                                        name="passwordConfirm"
                                         required
                                     />
                                     <span
-                                        data-toggle=".password-field"
-                                        className="fa fa-fw fa-eye absolute top-[3px] right-[10px] z-[2] text-[#868686] toggle-password"
+                                        onClick={togglePass}
+                                        className={`fa fa-fw ${showPass ? "fa-eye-slash" : "fa-eye"} cursor-pointer absolute top-[3px] right-[10px] z-[2] text-[#868686]`}
                                     ></span>
                                     </span>
                                 </div>

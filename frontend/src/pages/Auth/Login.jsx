@@ -6,16 +6,21 @@ import Loading from '../../components/Loading/Loading';
 
 const Login = () => {
     const [loading, setLoading] = useState(true);
+    const[showPass, setShowPass] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    const togglePass = () =>{
+      setShowPass(!showPass)
+    }
 
-    return () => clearTimeout(timer);
-  }, []);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 500);
 
-  if (loading) return <Loading />;
+      return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) return <Loading />;
 
   return (
     <div
@@ -43,15 +48,15 @@ const Login = () => {
 
                 <span className={`${styles["password-field-show"]} relative block`}>
                   <input
-                    type="password"
+                    type={showPass ? "text": "password"}
                     placeholder="Enter Password"
                     name="password"
                     className={`${styles["password-field"]} transition-all duration-[0.3s] ease-in-out rounded-[5px] focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] inline-block text-[14px] text-[#666] bg-[#f8f8f8] border-b-[2px] border-solid border-[#ccc] w-full py-[12px] px-[20px] my-[8px]`}
                     required
                   />
                   <span
-                    data-toggle=".password-field"
-                    className="fa fa-fw fa-eye absolute top-[23px] right-[10px] z-[2] text-[#868686] toggle-password"
+                    onClick={togglePass}
+                    className={`fa fa-fw ${showPass ? "fa-eye-slash" : "fa-eye"} absolute top-[23px] right-[10px] z-[2] text-[#868686] cursor-pointer`}
                   ></span>
                 </span>
 
