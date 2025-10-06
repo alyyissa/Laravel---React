@@ -22,8 +22,7 @@ const ForgetPass = () => {
         <div className={`${styles["content-detail"]} h-screen flex justify-center items-center flex-col`}>
           <div className={`${styles["hero-container"]} relative z-[1] max-w-[500px]`}>
             <form
-            className={`${styles["forgot-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
-            method="post"
+            className={`shadow-2xl sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
                 <img src="assets/images/logo.png" alt="logo" className={styles.avatar} />

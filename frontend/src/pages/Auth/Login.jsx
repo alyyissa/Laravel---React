@@ -27,7 +27,6 @@ const Login = () => {
           <div className={styles["login-page"]}>
             <form
               className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px]`}
-              method="post"
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
                 <img src="assets/images/logo.png" alt="Avatar" className={styles.avatar} />
@@ -94,15 +93,15 @@ const Login = () => {
                   <div>
                     <button
                       type="button"
-                      className={`${styles.google} w-[35px] h-[35px] my-[8px] mr-[5px] border-[2px] border-solid border-[#c3c3c3] hover:text-[#db4437] hover:border-[#db4437] rounded-[30px] bg-transparent outline-[1px] outline-solid outline-transparent transition-all duration-[0.2s] ease-in-out`}
+                      className={`${styles.google} cursor-pointer w-[35px] h-[35px] my-[8px] mr-[5px] border-[1px] border-solid border-[#c3c3c3] hover:text-[#db4437] hover:border-[#db4437] rounded-3xl bg-transparent outline-[1px] outline-solid outline-transparent transition-all duration-[0.4s] ease-in-out`}
                     >
-                      <i className="fab fa-google text-[#c3c3c3] text-[14px] transition-all duration-[0.2s] ease-in-out"></i>
+                      <i className="fab fa-google text-[#c3c3c3] text-[14px] transition-all duration-[0.4s] ease-in-out"></i>
                     </button>
                   </div>
 
                   <span className="mt-[10px] block text-[#868686] text-[14px]">
-                    Not a member?
-                    <Link to="/signup"> Sign up</Link>
+                    Not a member? 
+                    <Link to="/signup" className='duration-[0.3s] hover:text-[#444] ease-in-out font-semibold text-[#5076db]'> Sign up </Link>
                   </span>
                 </div>
               </div>

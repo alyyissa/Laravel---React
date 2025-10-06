@@ -114,15 +114,15 @@ const Signup = () => {
                                 <div className="mb-[5px]">
                                     <button
                                     type="button"
-                                    className={`${styles.google} w-[35px] h-[35px] hover:border-[#db4437] transition-all duration-[0.3s] ease-in-out my-[8px] mr-[5px] inline-block items-center justify-center border-[2px] outline-[1px] border-solid outline-solid border-[#c3c3c3] outline-transparent rounded-[30px] bg-transparent`}
+                                    className={`${styles.google} cursor-pointer w-[35px] h-[35px] hover:border-[#db4437] transition-all duration-[0.4s] ease-in-out my-[8px] mr-[5px] inline-block items-center justify-center border-[2px] outline-[1px] border-solid outline-solid border-[#c3c3c3] outline-transparent rounded-[30px] bg-transparent`}
                                     >
-                                    <i className="fab fa-google text-[14px] text-[#c3c3c3] transition-all duration-[0.2s] ease-in-out"></i>
+                                    <i className="fab fa-google text-[14px] text-[#c3c3c3] transition-all duration-[0.4s] ease-in-out"></i>
                                     </button>
                                 </div>
 
                                 <span className="mt-[10px] block text-[#868686] text-[14px]">
                                     Already have an account?
-                                    <Link to="/login"> Login</Link>
+                                    <Link to="/login" className='duration-[0.3s] hover:text-[#444] ease-in-out font-semibold text-[#5076db]'> Login</Link>
                                 </span>
                                 </div>
                             </div>
