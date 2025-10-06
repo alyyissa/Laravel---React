@@ -38,7 +38,7 @@ const Navbar = () => {
     
   return (
     <div className={`px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16 fixed top-0
-    border-b b-2 bg-yellow-100 py-12 transition-transform duration-400 w-full z-50
+    border-b b-1 border-[#5076db] bg-[#b1e1b9] py-12 transition-transform duration-400 w-full z-50
     ${showNav ? "translate-y-0" : "-translate-y-full"}`}>
       <ul>
         <li>

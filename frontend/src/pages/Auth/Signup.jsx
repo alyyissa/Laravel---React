@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
 import { assets } from '../../assets/assets';
 import styles from './Auth.module.css';
 import { Link } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
 
 const Signup = () => {
+
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loading />;
   return (
     <div className="bg-cover bg-no-repeat bg-center min-h-screen"
          style={{ backgroundImage: `url(${assets.background})` }}>
