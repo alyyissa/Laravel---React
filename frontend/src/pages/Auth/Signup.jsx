@@ -1,0 +1,123 @@
+import { assets } from '../../assets/assets';
+import styles from './Auth.module.css';
+import { Link } from 'react-router-dom';
+
+const Signup = () => {
+  return (
+    <div className="bg-cover bg-no-repeat bg-center min-h-screen"
+         style={{ backgroundImage: `url(${assets.background})` }}>
+            <div  className="h-screen flex justify-center items-center flex-col px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
+                <div className="relative z-[1] max-w-[500px]">
+                    <div className={styles["login-page"]}>
+                        <form
+                        className={`${styles["signup-form"]} sm:w-[450px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
+                        method="post"
+                        >
+                            <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
+                                <img src="assets/images/logo.png" alt="logo" className={styles.avatar} />
+                            </div>
+
+                            <div className={`${styles["input-control"]} pt-[15px] pr-[30px] pb-[30px] pl-[30px]`}>
+                                <div className="flex flex-wrap mx-[-10px]">
+                                <div className="sm:w-[50%] w-full px-[10px]">
+                                    <input
+                                    type="text"
+                                    placeholder="Enter Username"
+                                    className="focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]"
+                                    name="uname"
+                                    required
+                                    />
+                                </div>
+
+                                <div className="sm:w-[50%] w-full px-[10px]">
+                                    <input
+                                    type="email"
+                                    placeholder="Enter Email"
+                                    className="focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]"
+                                    name="email"
+                                    required
+                                    />
+                                </div>
+
+                                <div className="sm:w-[50%] w-full px-[10px]">
+                                    <input
+                                    type="password"
+                                    placeholder="Enter Password"
+                                    className="focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]"
+                                    name="psw"
+                                    required
+                                    />
+                                </div>
+
+                                <div className="sm:w-[50%] w-full px-[10px]">
+                                    <span className={`${styles["password-field-show"]} relative`}>
+                                    <input
+                                        className={`${styles["password-field"]} focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] w-full inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]`}
+                                        type="password"
+                                        placeholder="Re-enter Password"
+                                        name="psw"
+                                        required
+                                    />
+                                    <span
+                                        data-toggle=".password-field"
+                                        className="fa fa-fw fa-eye absolute top-[3px] right-[10px] z-[2] text-[#868686] toggle-password"
+                                    ></span>
+                                    </span>
+                                </div>
+                                </div>
+
+                                <label
+                                className={`${styles["label-container"]} relative inline-block pl-[30px] my-[12px] text-[14px] text-[#868686] leading-[25px]`}
+                                >
+                                I agree with{" "}
+                                <a href="#" className="text-[#5076db] font-semibold underline decoration-1">
+                                    privacy policy
+                                </a>
+                                <input type="checkbox" />
+                                <span
+                                    className={`${styles.checkmark} absolute top-[2px] left-[2px] h-[20px] w-[20px] bg-[#fff] outline-[2px] outline-solid outline-transparent border-[2px] border-solid border-[#cccccc] rounded-[10px]`}
+                                ></span>
+                                </label>
+
+                                <div className={`${styles["login-btns"]} text-center`}>
+                                <button
+                                    type="submit"
+                                    className="bg-[#5076db] text-[14px] transition-all duration-[0.3s] ease-in-out font-semibold rounded-[5px] border-[2px] border-solid border-transparent text-[#fff] py-[8px] px-[15px] my-[8px] cursor-pointer w-[90px] hover:bg-transparent hover:text-[#5076db] hover:border-[#5076db]"
+                                >
+                                    Sign up
+                                </button>
+                                </div>
+
+                                <div className={`${styles["division-lines"]} w-full relative block`}>
+                                <span className="w-[30%] h-[1px] bg-[#e0e0e0] absolute top-[8px] left-0 m-auto"></span>
+                                <p className="text-center sm:w-[40%] w-[50%] my-[15px] mx-auto uppercase text-[12px] font-semibold text-[#aaa] relative z-[2]">
+                                    or signup with
+                                </p>
+                                <span className="w-[30%] h-[1px] bg-[#e0e0e0] absolute top-[8px] right-0 m-auto"></span>
+                                </div>
+
+                                <div className={`${styles["login-with-btns"]} text-center`}>
+                                <div className="mb-[5px]">
+                                    <button
+                                    type="button"
+                                    className={`${styles.google} w-[35px] h-[35px] hover:border-[#db4437] transition-all duration-[0.3s] ease-in-out my-[8px] mr-[5px] inline-block items-center justify-center border-[2px] outline-[1px] border-solid outline-solid border-[#c3c3c3] outline-transparent rounded-[30px] bg-transparent`}
+                                    >
+                                    <i className="fab fa-google text-[14px] text-[#c3c3c3] transition-all duration-[0.2s] ease-in-out"></i>
+                                    </button>
+                                </div>
+
+                                <span className="mt-[10px] block text-[#868686] text-[14px]">
+                                    Already have an account?
+                                    <Link to="/login"> Login</Link>
+                                </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+  )
+}
+
+export default Signup
