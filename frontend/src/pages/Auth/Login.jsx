@@ -38,7 +38,7 @@ const Login = () => {
               </div>
 
               <div className={`${styles["input-control"]} relative pt-[15px] pr-[30px] pb-[30px] pl-[30px]`}>
-                <input
+                <input  
                   type="text"
                   placeholder="Enter Username"
                   name="uname"

@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Signup from './pages/Auth/Signup'
 import ForgetPass from './pages/Auth/ForgetPass'
 import NotFound from './pages/Error.jsx/NotFound'
+import ContactUs from './pages/ContactUs'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' element={<Signup />}/>
         <Route path='/forgetpass' element={<ForgetPass />}/>
         <Route path='/error' element={<NotFound />}/>
+        <Route path='/contactus' element={<ContactUs />}/>
       </Routes>
     </div>
   )
