@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 import styles from './Auth.module.css';
 import Loading from '../../components/Loading/Loading';
+import Button from '../../components/Button/Button';
 
 const Login = () => {
     const [loading, setLoading] = useState(true);
@@ -24,14 +25,14 @@ const Login = () => {
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      className="bg-cover bg-no-repeat bg-center h-[90vh]"
       style={{ backgroundImage: `url(${assets.background})` }}
     >
-      <div className="h-screen flex justify-center items-center flex-col px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
+      <div className="h-[80vh] flex justify-center items-center flex-col px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
         <div className="relative z-[1] max-w-[500px]"> 
           <div className={styles["login-page"]}>
             <form
-              className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px]`}
+              className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px] mt-10`}
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
                 <img src="assets/images/logo.png" alt="Avatar" className={styles.avatar} />
@@ -77,14 +78,7 @@ const Login = () => {
                   </Link>
                 </span>
 
-                <div className={`${styles["login-btns"]} text-center`}>
-                  <button
-                    type="submit"
-                    className="bg-[#5076db] text-[14px] transition-all duration-[0.3s] ease-in-out font-semibold rounded-[5px] border-[2px] border-solid border-transparent text-[#fff] py-[8px] px-[15px] my-[8px] cursor-pointer w-[90px] hover:bg-transparent hover:text-[#5076db] hover:border-[#5076db]"
-                  >
-                    Login
-                  </button>
-                </div>
+                <Button text="Login"/>
 
                 <div className={`${styles["division-lines"]} w-full relative block`}>
                   <span className="w-[30%] h-[1px] bg-[#e0e0e0] absolute top-[8px] left-0 m-auto"></span>

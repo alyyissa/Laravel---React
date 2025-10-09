@@ -3,6 +3,7 @@ import { assets } from '../../assets/assets';
 import styles from './Auth.module.css';
 import { Link } from 'react-router-dom';
 import Loading from '../../components/Loading/Loading';
+import Button from '../../components/Button/Button';
 
 const Signup = () => {
 
@@ -98,14 +99,7 @@ const Signup = () => {
                                 ></span>
                                 </label>
 
-                                <div className={`${styles["login-btns"]} text-center`}>
-                                <button
-                                    type="submit"
-                                    className="bg-[#5076db] text-[14px] transition-all duration-[0.3s] ease-in-out font-semibold rounded-[5px] border-[2px] border-solid border-transparent text-[#fff] py-[8px] px-[15px] my-[8px] cursor-pointer w-[90px] hover:bg-transparent hover:text-[#5076db] hover:border-[#5076db]"
-                                >
-                                    Sign up
-                                </button>
-                                </div>
+                                <Button text="Sign up"/>
 
                                 <div className={`${styles["division-lines"]} w-full relative block`}>
                                 <span className="w-[30%] h-[1px] bg-[#e0e0e0] absolute top-[8px] left-0 m-auto"></span>
