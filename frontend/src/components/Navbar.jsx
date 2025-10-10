@@ -18,28 +18,18 @@ const Navbar = () => {
             document.body.style.overflowY = "auto";
         }
     },[open]);
-
-    // useEffect(()=>{
-    //     const handleScroll = () => {
-    //         const currentScroll = window.scrollY;
-
-    //         if(currentScroll < 50){
-    //             setShowNav(true);
-    //         }else if(currentScroll > lastScroll){
-    //             setShowNav(false);
-    //         }else{
-    //             setShowNav(true);
-    //         }
-    //         setLastScroll(currentScroll)
-    //     };
-    //         window.addEventListener("scroll",handleScroll);
-    //         return () => window.removeEventListener("scroll",handleScroll)
-    // }, [lastScroll]);
     
   return (
     <div className={`px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16 relative top-0
-    border-b b-1 border-[#5076db] bg-[#b1e1b9] py-6 transition-transform duration-400 w-full z-50
-    ${showNav ? "translate-y-0" : "-translate-y-full"}`}>
+    bg-[#b1e1b9] py-6 transition-transform duration-400 w-full z-50
+    ${showNav ? "translate-y-0" : "-translate-y-full"}`}
+    style={{
+    boxShadow: `
+      0 3px 4px color-mix(in oklch, oklch(27.54% 0.1638 265.98deg) 8%, transparent),
+      0 4px 12px color-mix(in oklch, oklch(27.54% 0.1638 265.98deg) 8%, transparent)
+    `,
+  }}
+    >
       <ul>
         <li>
             <Link to="/login">Login</Link>

@@ -34,7 +34,7 @@ const Login = () => {
         <div className="relative z-[1] max-w-[500px]"> 
           <div className={styles["login-page"]}>
             <form
-              className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px] mt-10`}
+              className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px]`}
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
                 <img src="assets/images/logo.png" alt="Avatar" className={styles.avatar} />
@@ -65,7 +65,6 @@ const Login = () => {
                 {/* <Credentials 
                 text="Wrong Credentials"
                 /> */}
-                <Success text="Done"/>
                 <label
                   className={`${styles["label-container"]} inline-block relative pl-[30px] my-[12px] cursor-pointer text-[14px] text-[#868686] leading-[25px] transition-all duration-[0.3s] ease-in-out`}
                 >

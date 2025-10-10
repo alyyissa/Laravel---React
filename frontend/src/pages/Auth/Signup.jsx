@@ -30,7 +30,7 @@ const Signup = () => {
                 <div className="relative z-[1] max-w-[500px]">
                     <div className={styles["login-page"]}>
                         <form
-                        className={`${styles["signup-form"]} sm:w-[450px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px] mt-10`}
+                        className={`${styles["signup-form"]} sm:w-[450px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
                         method="post"
                         >
                             <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
