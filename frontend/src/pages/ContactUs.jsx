@@ -17,9 +17,7 @@ const ContactUs = () => {
 
   if (loading) return <Loading />
   return (
-    <div className="bg-cover bg-no-repeat bg-center h-[100vh] flex justify-center items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16" 
-    
-    >
+    <div className="bg-cover bg-no-repeat bg-center h-[90vh] flex justify-center items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
       <div>
         <div className="relative flex justify-center items-center flex-col">
             <form className="rounded-[30px] shadow-2xl  lg:w-[715px] w-[350px] items-center bg-[#fff] py-2">

@@ -30,7 +30,7 @@ const Login = () => {
       className="bg-cover bg-no-repeat bg-center h-[90vh] flex justify-center items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16"
       style={{ backgroundImage: `url(${assets.background})` }}
     >
-      <div className="relative flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col">
         <div className="relative z-[1] max-w-[500px]"> 
           <div className={styles["login-page"]}>
             <form

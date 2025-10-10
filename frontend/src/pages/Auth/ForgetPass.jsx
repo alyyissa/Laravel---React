@@ -15,11 +15,11 @@ const ForgetPass = () => {
 
   if (loading) return <Loading />
   return (
-    <div className="bg-cover bg-no-repeat bg-center min-h-scree"
+    <div className="bg-cover bg-no-repeat bg-center h-[90vh] flex justify-center items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16"
     style={{ backgroundImage: `url(${assets.background})` }}
     >
       <div className="w-full px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
-        <div className={`${styles["content-detail"]} h-screen flex justify-center items-center flex-col`}>
+        <div className={`${styles["content-detail"]} flex justify-center items-center flex-col`}>
           <div className={`${styles["hero-container"]} relative z-[1] max-w-[500px]`}>
             <form
             className={`shadow-2xl sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
