@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className='px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16 bg-amber-300 z-50 mt-24 py-30'>
+    <div className='px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16 bg-amber-300 z-50 h-[100vh]'>
       <div className=' h-full text-center '>
         <h1 className="text-[5em]">Crafted for Confidence <br /> Inspired by You</h1>
         <p className="pt-10">Stand out with bold scents and timeless watches — designed for those who value elegance in every detail</p>
