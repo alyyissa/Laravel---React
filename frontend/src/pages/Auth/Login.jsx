@@ -4,6 +4,8 @@ import { assets } from '../../assets/assets';
 import styles from './Auth.module.css';
 import Loading from '../../components/Loading/Loading';
 import Button from '../../components/Button/Button';
+import Credentials from '../../components/Alerts/Credentials';
+import Success from '../../components/Alerts/Success';
 
 const Login = () => {
     const [loading, setLoading] = useState(true);
@@ -25,10 +27,10 @@ const Login = () => {
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center h-[90vh]"
+      className="bg-cover bg-no-repeat bg-center h-[90vh] flex justify-center items-center px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16"
       style={{ backgroundImage: `url(${assets.background})` }}
     >
-      <div className="h-[80vh] flex justify-center items-center flex-col px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16">
+      <div className="relative flex justify-center items-center flex-col">
         <div className="relative z-[1] max-w-[500px]"> 
           <div className={styles["login-page"]}>
             <form
@@ -38,7 +40,7 @@ const Login = () => {
                 <img src="assets/images/logo.png" alt="Avatar" className={styles.avatar} />
               </div>
 
-              <div className={`${styles["input-control"]} relative pt-[15px] pr-[30px] pb-[30px] pl-[30px]`}>
+              <div className={`${styles["input-control"]} relative pt-[15px] px-[30px] pb-[30px]`}>
                 <input  
                   type="text"
                   placeholder="Enter Username"
@@ -47,7 +49,7 @@ const Login = () => {
                   required
                 />
 
-                <span className={`${styles["password-field-show"]} relative block`}>
+                <span className={`${styles["password-field-show"]} relative block mb-2`}>
                   <input
                     type={showPass ? "text": "password"}
                     placeholder="Enter Password"
@@ -60,7 +62,10 @@ const Login = () => {
                     className={`fa fa-fw ${showPass ? "fa-eye-slash" : "fa-eye"} absolute top-[23px] right-[10px] z-[2] text-[#868686] cursor-pointer`}
                   ></span>
                 </span>
-
+                {/* <Credentials 
+                text="Wrong Credentials"
+                /> */}
+                <Success text="Done"/>
                 <label
                   className={`${styles["label-container"]} inline-block relative pl-[30px] my-[12px] cursor-pointer text-[14px] text-[#868686] leading-[25px] transition-all duration-[0.3s] ease-in-out`}
                 >
