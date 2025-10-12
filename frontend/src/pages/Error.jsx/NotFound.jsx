@@ -14,7 +14,7 @@ const NotFound = () => {
 
     if (loading) return <Loading />;
   return (
-    <div className={`${styles["page-section"]} bg-cover bg-no-repeat bg-center`}
+    <div className={`${styles["page-section"]} bg-cover bg-no-repeat bg-center h-[90vh]`}
     style={{backgroundImage: `url(${assets.background})`}}
     >
       <div className="w-full px-[16px]">
