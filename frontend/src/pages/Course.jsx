@@ -35,7 +35,7 @@ const Container = ({course}) => {
               <a href="#" className="text-indigo-500">Earphones</a>
             </div>
             <div className="flex gap-3 mx-3 sm:mx-4 md:mx-11 lg:mx-13 xl:mx-14 2xl:mx-16 bottom-0">
-              <h3 className="text-4xl py-5 font-bold">Course: {course}</h3>
+              <h3 className="text-4xl py-5 font-bold">Course: Data Structure</h3>
             </div>
 
             <div className="flex gap-3 mx-3 sm:mx-4 md:mx-11 lg:mx-13 xl:mx-14 2xl:mx-16 bottom-0">
