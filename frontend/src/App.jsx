@@ -12,6 +12,10 @@ import CourseDescription from './components/Course/CourseDescription'
 import CourseChapters from './components/Course/CourseChapters'
 import CourseComments from './components/Course/CourseComments'
 import CourseExam from './components/Course/CourseExam'
+import Chapter from './pages/Chapter'
+import ChapterLinks from './components/Chapter/ChapterLinks'
+import ChapterExercises from './components/Chapter/ChapterExercises'
+import ChapterSummary from './components/Chapter/ChapterSummary'
 
 function App() {
   return (
@@ -25,13 +29,18 @@ function App() {
         <Route path='/error' element={<NotFound />}/>
         <Route path='/contactus' element={<ContactUs />}/>
         {/* Nested For Course */}
-          <Route path='/courses/:courseId' element={<Course />}>
-            <Route path='' element={<CourseDescription />} />
-            <Route path="chapters" element={<CourseChapters />} />
-            <Route path="comments" element={<CourseComments />} />
-            <Route path='exam' element={<CourseExam />}/>
+        <Route path='/courses/:courseId' element={<Course />}>
+          <Route path='' element={<CourseDescription />} />
+          <Route path="chapters" element={<CourseChapters />} />
+          <Route path="comments" element={<CourseComments />} />
+          <Route path='exam' element={<CourseExam />}/>
+        </Route>
+          {/* Nested For Chapter */}
+          <Route path='/courses/:courseId/chapters/:chapterId' element={<Chapter/>}>
+            <Route path='' element={<ChapterLinks/>}/>
+            <Route path='exercises' element={<ChapterExercises/>}/>
+            <Route path='summary' element={<ChapterSummary/>}/>
           </Route>
-        <Route path='/exam' element={<Exam />}/>
       </Routes>
     </div>
   )

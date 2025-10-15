@@ -84,11 +84,11 @@ const Navbar = () => {
 
       {/* Mobile Side Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-bgNav shadow-lg transform transition-transform duration-300 z-50
+        className={`fixed top-0 left-0 h-full w-64 bg-bgNav transform transition-transform duration-300 z-50 shadow-2xl
         ${showNav ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="p-5">
-          <button onClick={toggleNav} className="text-coprimary mb-5">
+          <button onClick={toggleNav} className="text-coprimary mb-5 ml-[-5px]">
             <i className="fa-solid fa-xmark text-2xl"></i>
           </button>
 
