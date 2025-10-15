@@ -16,6 +16,7 @@ import Chapter from './pages/Chapter'
 import ChapterLinks from './components/Chapter/ChapterLinks'
 import ChapterExercises from './components/Chapter/ChapterExercises'
 import ChapterSummary from './components/Chapter/ChapterSummary'
+import Courses from './pages/Courses'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/forgetpass' element={<ForgetPass />}/>
         <Route path='/error' element={<NotFound />}/>
         <Route path='/contactus' element={<ContactUs />}/>
+        <Route path='/courses' element={<Courses />}/>
         {/* Nested For Course */}
         <Route path='/courses/:courseId' element={<Course />}>
           <Route path='' element={<CourseDescription />} />

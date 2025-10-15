@@ -43,8 +43,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/error" className="text-coprimary font-semibold">
-                Error
+              <Link to="/courses" className="text-coprimary font-semibold">
+                Courses
               </Link>
             </li>
             <li>
@@ -100,7 +100,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link onClick={toggleNav} to="/error" className="text-coprimary font-semibold">
-                Error
+                Courses
               </Link>
             </li>
             <li>

@@ -73,6 +73,26 @@ const Signup = () => {
                                 </select>
                             </div>
 
+                            <div className='px-[10px] sm:w-[50%] w-full'>
+                                <select 
+                                className='w-full focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]'>
+                                    <option className='text-[#666]' hidden>Gender</option>
+                                    <option value="" className='text-[#666]'>Male</option>
+                                    <option value="" className='text-[#666]'>Female</option>
+                                </select>
+                            </div>
+
+                            <div className='px-[10px] sm:w-[50%] w-full'>
+                                <select 
+                                className='w-full focus:rounded-[5px] focus:border-b-[2px] focus:border-solid focus:border-[#5076db] focus:outline-[0] inline-block transition-all duration-[0.3s] ease-in-out rounded-[5px] border-b-[2px] text-[14px] text-[#666] bg-[#f8f8f8] border-solid border-[#ccc] py-[12px] px-[20px] my-[8px]'>
+                                    <option className='text-[#666]' hidden>Academic Year</option>
+                                    <option value="" className='text-[#666]'>1st year</option>
+                                    <option value="" className='text-[#666]'>2nd year</option>
+                                    <option value="" className='text-[#666]'>3rd year</option>
+                                    <option value="" className='text-[#666]'>3+ years</option>
+                                </select>
+                            </div>
+
                             <div className="sm:w-[50%] w-full px-[10px]">
                                 <input
                                 type="password"
