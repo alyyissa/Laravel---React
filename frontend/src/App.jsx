@@ -17,6 +17,7 @@ import ChapterLinks from './components/Chapter/ChapterLinks'
 import ChapterExercises from './components/Chapter/ChapterExercises'
 import ChapterSummary from './components/Chapter/ChapterSummary'
 import Courses from './pages/Courses'
+import Admin from './pages/Admin/Admin'
 
 function App() {
   return (
@@ -38,11 +39,15 @@ function App() {
           <Route path='exam' element={<CourseExam />}/>
         </Route>
           {/* Nested For Chapter */}
-          <Route path='/courses/:courseId/chapters/:chapterId' element={<Chapter/>}>
-            <Route path='' element={<ChapterLinks/>}/>
-            <Route path='exercises' element={<ChapterExercises/>}/>
-            <Route path='summary' element={<ChapterSummary/>}/>
-          </Route>
+        <Route path='/courses/:courseId/chapters/:chapterId' element={<Chapter/>}>
+          <Route path='' element={<ChapterLinks/>}/>
+          <Route path='exercises' element={<ChapterExercises/>}/>
+          <Route path='summary' element={<ChapterSummary/>}/>
+        </Route>
+        {/* Admin Routes */}
+        <Route path='/admin' element={<Admin />}>
+          
+        </Route>
       </Routes>
     </div>
   )
