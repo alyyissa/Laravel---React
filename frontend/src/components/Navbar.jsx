@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
@@ -6,7 +6,29 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const toggleNav = () => setShowNav(!showNav);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
+  const toggleDropdown = () => {
+    setShowDropdown((prev) => !prev);
+  };
+
+  // ✅ Close when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  
   useEffect(() => {
     const handleResize = () =>{
 
@@ -88,11 +110,9 @@ const Navbar = () => {
         </div>
         <div className="md:hidden flex gap-2 items-center">
             <Link to="/cart">
-            <i class="fa-solid fa-cart-shopping fa-flip-horizontal" style={{color: '#5076db'}}></i>
+            <i className="fa-solid fa-cart-shopping fa-flip-horizontal" style={{color: '#5076db'}}></i>
             </Link>
-            <Link to="/profile">
-              <i className="fa-solid fa-user" style={{color: '#5076db'}}></i>
-            </Link>
+            
           </div>
       </div>
 
@@ -102,8 +122,8 @@ const Navbar = () => {
         ${showNav ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="p-5">
-          <button onClick={toggleNav} className="text-coprimary mb-5 ml-[-5px]">
-            <i className="fa-solid fa-xmark text-2xl"></i>
+          <button onClick={toggleNav} className="text-coprimary mb-5 ml-[-5px] cursor-pointer">
+            <i className="fa-solid fa-xmark"></i>
           </button>
 
           <ul className="flex flex-col gap-6 mt-5">
