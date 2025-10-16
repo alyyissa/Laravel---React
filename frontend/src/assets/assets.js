@@ -1,6 +1,6 @@
 import background from "./images/background-1.png";
 import logo from "./images/shiftcode-test.png"
-
+import small_logo from "./images/mini-logo.png"
 
 
 export const lebaneseUniversities = [
@@ -24,5 +24,6 @@ export const lebaneseUniversities = [
 
 export const assets = {
     background,
-    logo
+    logo,
+    small_logo
 }

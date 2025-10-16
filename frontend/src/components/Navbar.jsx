@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const toggleNav = () => setShowNav(!showNav);
 
   useEffect(() => {
     const handleResize = () =>{
-        if(window.innerWidth >= 768){
+
+      const isNowDesktop = window.innerWidth >= 768;
+        if(isNowDesktop){
             setShowNav(false)
         }
+        setIsDesktop(isNowDesktop);
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize)
@@ -20,7 +23,7 @@ const Navbar = () => {
     <>
       <div
         className={`px-3 sm:px-4 md:px-11 lg:px-13 xl:px-14 2xl:px-16 relative top-0
-        bg-bgNav py-6 transition-transform duration-400 w-full z-50 flex justify-between
+        bg-bgNav py-4 md:py-5 transition-transform duration-400 w-full z-50 flex justify-between
         `}
         style={{
           boxShadow: `
@@ -29,11 +32,14 @@ const Navbar = () => {
             `,
         }}
       >
-        <div className="md:hidden block cursor-pointer">
+        <div className="md:hidden cursor-pointer flex items-center">
           <i className="fa-solid fa-bars text-coprimary" onClick={toggleNav}></i>
         </div>
 
-        <img src={assets.logo} alt="Logo" />
+        <img
+        src={isDesktop ? assets.logo : assets.small_logo}
+        alt="Logo"
+        />
 
         <div className="hidden md:block">
           <ul className="flex flex-row gap-10">
@@ -80,11 +86,19 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <div className="md:hidden flex gap-2 items-center">
+            <Link to="/cart">
+            <i class="fa-solid fa-cart-shopping fa-flip-horizontal" style={{color: '#5076db'}}></i>
+            </Link>
+            <Link to="/profile">
+              <i className="fa-solid fa-user" style={{color: '#5076db'}}></i>
+            </Link>
+          </div>
       </div>
 
       {/* Mobile Side Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-bgNav transform transition-transform duration-300 z-50 shadow-2xl
+        className={`fixed top-0 left-0 h-full w-[64%] bg-bgNav transform transition-transform duration-300 z-50 shadow-2xl
         ${showNav ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="p-5">
