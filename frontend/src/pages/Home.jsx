@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react';
-import Hero from '../components/Hero'
+import Hero from '../components/Home/Hero'
 import Loading from '../components/Loading/Loading';
+import Stats from '../components/Home/Stats';
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <div className='bg-white' >
       <Hero />
+      <Stats />
     </div>
   )
 }
