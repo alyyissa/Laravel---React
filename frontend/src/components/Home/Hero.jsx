@@ -12,20 +12,18 @@ const Hero = () => {
         </svg>
       </div>
       <div className="px-3 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl text-center">
-          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-            The quick, brown fox
+        <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-3xl text-center">
+          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
+            Your CS Learning Hub
             <br className="hidden md:block" />
-            jumps over a{' '}
+            Courses, Chapters & Tests {' '}
             <span className="relative inline-block">
-              lazy dog{' '}
+              Await{' '}
               <div className="w-full h-1 -mt-1 bg-coprimary" />
             </span>
           </h2>
           <p className="mb-6 text-base font-thin tracking-wide text-gray-300 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae. explicabo. Sed ut perspiciatis unde omnis.
+            Browse chapters, solve MCQs, and prepare for success. Discover video explanations, practical exercises, and tests designed to help you master every course at your own pace.
           </p>
             <button
               className="font-semibold b-2 inline-flex items-center justify-center h-12 px-6 cursor-pointer tracking-wide text-white transition duration-200 rounded shadow-md w-auto bg-deep-purple-accent-400 bg-coprimary focus:shadow-outline focus:outline-none mb-4"
@@ -33,8 +31,7 @@ const Hero = () => {
               Get Started
             </button>
           <p className="max-w-md mb-10 text-sm font-thin tracking-wide text-gray-500 sm:text-sm sm:mx-auto md:mb-16">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium.
+            Scroll down to explore chapters, tests, and resources made for computer science students.
           </p>
           <a
             href="/"
