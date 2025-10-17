@@ -24,7 +24,7 @@ const ContactUs = () => {
         <div className="relative flex justify-center items-center flex-col">
             <form className="rounded-[30px] shadow-2xl  lg:w-[715px] w-[350px] items-center bg-[#fff] py-2">
               <div className="flex justify-center relative mb-10 mt-5">
-                <img src="assets/images/logo.png" alt="Avatar" />
+                <img src={assets.logo} alt="Avatar" />
               </div>
                 <div className="flex flex-col md:flex-row justify-between mx-5 md:mx-10">
                     <div className=" md:w-[45%] w-[100%]">

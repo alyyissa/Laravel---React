@@ -32,12 +32,12 @@ const Login = () => {
     >
       <div className="flex justify-center items-center flex-col">
         <div className="relative z-[1] max-w-[500px]"> 
-          <div className={styles["login-page"]}>
+          <div className={`${styles["login-page"]}`}>
             <form
               className={`${styles["login-form"]} sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] relative border-solid border-transparent rounded-[30px]`}
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
-                <img src="assets/images/logo.png" alt="Avatar" className={styles.avatar} />
+                <img src={assets.logo} alt="Avatar" className={styles.avatar} />
               </div>
 
               <div className={`${styles["input-control"]} relative pt-[15px] px-[30px] pb-[30px]`}>

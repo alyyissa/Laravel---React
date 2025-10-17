@@ -25,7 +25,7 @@ const ForgetPass = () => {
             className={`shadow-2xl sm:w-[350px] w-[290px] m-auto bg-[#fff] border-[1px] border-solid border-transparent rounded-[30px]`}
             >
               <div className={`${styles.imgcontainer} flex justify-center relative mt-[24px] mb-[12px]`}>
-                <img src="assets/images/logo.png" alt="logo" className={styles.avatar} />
+                <img src={assets.logo} alt="logo" className={styles.avatar} />
               </div>
 
               <div className={`${styles["input-control"]} relative pt-[15px] pr-[30px] pb-[30px] pl-[30px]`}>

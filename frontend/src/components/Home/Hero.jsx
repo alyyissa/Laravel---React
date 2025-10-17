@@ -11,7 +11,7 @@ const Hero = () => {
           <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
         </svg>
       </div>
-      <div className="px-3 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-3 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-3xl text-center">
           <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
             Your CS Learning Hub
@@ -26,11 +26,11 @@ const Hero = () => {
             Browse chapters, solve MCQs, and prepare for success. Discover video explanations, practical exercises, and tests designed to help you master every course at your own pace.
           </p>
             <button
-              className="font-semibold b-2 inline-flex items-center justify-center h-12 px-6 cursor-pointer tracking-wide text-white transition duration-200 rounded shadow-md w-auto bg-deep-purple-accent-400 bg-coprimary focus:shadow-outline focus:outline-none mb-4"
+              className="font-semibold b-2 inline-flex items-center justify-center h-12 px-6 cursor-pointer tracking-wide text-white transition duration-200 rounded shadow-md w-auto bg-deep-purple-accent-400 bg-coprimary focus:shadow-outline focus:outline-none mb-4 border b-2 hover:bg-transparent hover:text-[#5076db] border-[#5076db]"
             >
               Get Started
             </button>
-          <p className="max-w-md mb-10 text-sm font-thin tracking-wide text-gray-500 sm:text-sm sm:mx-auto md:mb-16">
+          <p className="max-w-md mb-10  font-thin tracking-wide text-gray-500 text-sm sm:mx-auto md:mb-12">
             Scroll down to explore chapters, tests, and resources made for computer science students.
           </p>
           <a
