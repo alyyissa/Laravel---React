@@ -15,7 +15,7 @@ const Home = () => {
 
     if (loading) return <Loading />;
   return (
-    <div className='bg-white' >
+    <div className='bg-primary' >
       <Hero />
       <Stats />
     </div>

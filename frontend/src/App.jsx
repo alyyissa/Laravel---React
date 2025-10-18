@@ -50,7 +50,7 @@ function App() {
         </Route>
         {/* Admin Routes */}
         <Route path='/admin' element={<Admin />}>
-          <Route path=''/>
+          {/* no routes yet */}
         </Route>
       </Routes>
     </div>
